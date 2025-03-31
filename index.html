@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mini futbol temalı harika masa oyunları. Sweet Bonanzastart ile eğlence ve rekabet dolu bir deneyim yaşayın.">
+    <meta name="keywords" content="masa oyunları, mini futbol, oyun, eğlence">
+    <meta name="author" content="Sweet Bonanzastart">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Sweet Bonanzastart - Mini Futbol Masa Oyunları</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">Sweet Bonanzastart</a>
+                <ul class="menu">
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#products">Ürünler</a></li>
+                    <li><a href="#testimonials">Yorumlar</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <li class="cart-icon">
+                        <a href="#cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <p>Ürün başarıyla sepete eklendi!</p>
+            <button id="close-popup" class="btn">Tamam</button>
+        </div>
+    </div>
+    <div id="cart-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Sepetiniz</h2>
+            <ul id="cart-items" style="list-style: none; padding: 0; margin-bottom: 1rem;"></ul>
+            <button id="checkout-button" class="btn">Satın Al</button>
+            <button id="close-cart-popup" class="btn">Kapat</button>
+        </div>
+    </div>
+
+    <div id="image-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <img id="popup-image" src="" alt="Detaylı Görünüm" style="max-width: 100%; height: auto;">
+            <button id="close-image-popup" class="btn">Kapat</button>
+        </div>
+    </div>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Mini Futbol Masa Oyunları</h1>
+            <p>Eğlenceyi başlatmak için hemen bir oyun seçin!</p>
+            <a href="#products" class="btn">Hemen İncele</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>Sweet Bonanzastart, eğlence ve rekabeti bir araya getirerek her yaştan oyuncu için unutulmaz bir oyun deneyimi sunmayı amaçlayan lider bir markadır. Mini futbol temalı masa oyunlarımız, hem aile üyelerinin hem de arkadaşların bir araya gelerek keyifli vakit geçirmelerini sağlar.</p>
+
+            <p>Kaliteli malzemelerden üretilen oyunlarımız, uzun ömürlü kullanım ve dayanıklılık sunar. Her oyun, özenle tasarlanmış detayları ve kullanıcı dostu yapısıyla hem çocuklar hem de yetişkinler için idealdir. Oyunlarımız, yalnızca eğlenceyi değil, aynı zamanda strateji geliştirme, takım çalışması ve sosyal etkileşimi de teşvik eder.</p>
+
+            <p>Sweet Bonanzastart olarak, müşteri memnuniyetini her şeyden üstün tutuyoruz. Geniş ürün yelpazemiz, herkesin kendi ihtiyaçlarına uygun bir oyun bulmasını sağlar. Ayrıca, yenilikçi tasarımlarımız ve uygun fiyat politikamızla sektörde fark yaratıyoruz.</p>
+
+            <p>Markamız, kullanıcılarımızın geri bildirimlerini dikkate alarak sürekli olarak gelişmeyi hedefler. Yeni nesil eğlenceyi evinize getirmek için buradayız! Sweet Bonanzastart ile unutulmaz anlar yaratmaya hazır olun.</p>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Ürünlerimiz</h2>
+            <div class="product-list">
+                <!-- Product Cards -->
+                <div class="product-card">
+                    <img src="assets/images/product1.jpg" alt="Mini Futbol Pro">
+                    <h3>Mini Futbol Pro</h3>
+                    <p>Profesyonel düzeyde tasarlanmış mini futbol oyun seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Pro">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product2.jpg" alt="Mini Futbol Basic">
+                    <h3>Mini Futbol Basic</h3>
+                    <p>Her yaştan oyuncuya uygun ekonomik mini futbol seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Basic">Sepete Ekle</button>
+                </div>
+                <!-- Additional Products -->
+                <div class="product-card">
+                    <img src="assets/images/product3.jpg" alt="Mini Futbol Kids">
+                    <h3>Mini Futbol Kids</h3>
+                    <p>Çocuklara özel mini futbol seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Kids">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product4.jpg" alt="Mini Futbol Compact">
+                    <h3>Mini Futbol Compact</h3>
+                    <p>Kompakt tasarımlı kolay taşınabilir mini futbol seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Compact">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product5.jpg" alt="Mini Futbol Deluxe">
+                    <h3>Mini Futbol Deluxe</h3>
+                    <p>Deluxe tasarım, üst düzey kalite.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Deluxe">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product6.jpg" alt="Mini Futbol Travel">
+                    <h3>Mini Futbol Travel</h3>
+                    <p>Seyahat dostu mini futbol seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Travel">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product7.jpg" alt="Mini Futbol Classic">
+                    <h3>Mini Futbol Classic</h3>
+                    <p>Klasik tasarım, zamansız eğlence.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Classic">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product8.jpg" alt="Mini Futbol Family">
+                    <h3>Mini Futbol Family</h3>
+                    <p>Aile boyu eğlence için özel tasarım.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Family">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product9.jpg" alt="Mini Futbol Sport">
+                    <h3>Mini Futbol Sport</h3>
+                    <p>Sporseverlere özel mini futbol seti.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Sport">Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/product10.jpg" alt="Mini Futbol Pro Max">
+                    <h3>Mini Futbol Pro Max</h3>
+                    <p>Profesyonellere özel üst düzey tasarım.</p>
+                    <button class="btn add-to-cart" data-product="Mini Futbol Pro Max">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galeri</h2>
+            <div class="gallery-grid">
+                <img src="assets/images/gallery2.jpg" alt="Galeri Görsel 1">
+                <img src="assets/images/gallery1.jpg" alt="Galeri Görsel 2">
+                <img src="assets/images/gallery3.jpg" alt="Galeri Görsel 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Yorumlar</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user1.jpg" alt="User 1">
+                        <p>"Mini futbol seti ailece vakit geçirmek için mükemmel bir seçenek! Çok eğleniyoruz."
+                        </p>
+                        <cite>- Cemre Y.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user2.jpg" alt="User 2">
+                        <p>"Çocuklarım için aldım ve şimdi her gün oynuyoruz. Dayanıklı ve kaliteli!"
+                        </p>
+                        <cite>- Fatih A.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user3.jpg" alt="User 3">
+                        <p>"Ürünlerin tasarımı ve detayları gerçekten etkileyici. Herkese tavsiye ederim."
+                        </p>
+                        <cite>- Sibel T.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user4.jpg" alt="User 4">
+                        <p>"Arkadaşlarla maç yaparken inanılmaz eğleniyoruz. Fiyatına göre harika bir ürün!"
+                        </p>
+                        <cite>- Emre K.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user5.jpg" alt="User 5">
+                        <p>"Hızlı kargo ve güvenilir hizmet. İlk alışverişimden çok memnun kaldım."
+                        </p>
+                        <cite>- Leyla S.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user6.jpg" alt="User 6">
+                        <p>"Mini futbol oynarken zamanın nasıl geçtiğini anlamıyoruz. Çok eğlenceli!"
+                        </p>
+                        <cite>- Hakan D.</cite>
+                    </blockquote>
+                </div>
+                <div class="testimonial-item">
+
+                    <blockquote>
+                        <img src="assets/images/user7.jpg" alt="User 7">
+                        <p>"Tasarımı çok şık ve kurulumu çok kolay. Evde herkes bayıldı!"
+                        </p>
+                        <cite>- Zeynep Ö.</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Sıkça Sorulan Sorular (SSS)</h2>
+            <div class="faq-columns">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 onclick="toggleAnswer(this)">Mini futbol seti neden ailece vakit geçirmek için iyi bir seçenek?</h3>
+                        <p class="answer">Mini futbol seti, hem eğlenceli hem de herkesin katılabileceği bir etkinlik sunar. Ailece bağ kurmak için harika bir araçtır.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 onclick="toggleAnswer(this)">Ürünlerinizi temizlemek kolay mı?</h3>
+                        <p class="answer">Evet, tüm ürünlerimiz dayanıklı malzemelerden yapılmıştır ve kolayca temizlenebilir.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 onclick="toggleAnswer(this)">Kargo süresi ne kadar sürüyor?</h3>
+                        <p class="answer">Kargo süresi Türkiye genelinde 2-4 iş günü arasında değişmektedir.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 onclick="toggleAnswer(this)">Ürün kurulumu zor mu?</h3>
+                        <p class="answer">Hayır, ürünlerimiz kolay kurulum için tasarlanmıştır ve gerekli talimatlarla birlikte gelir.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 onclick="toggleAnswer(this)">Mini futbol seti hediyelik olarak uygun mu?</h3>
+                        <p class="answer">Evet, mini futbol seti her yaş grubu için harika bir hediye seçeneğidir.</p>
+                    </div>
+                </div>
+                <div class="faq-image">
+                    <img src="assets/images/faq-image.jpg" alt="FAQ Görsel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>İletişim</h2>
+            <form action="submit" method="post">
+                <input type="text" name="name" placeholder="Adınız" required>
+                <input type="email" name="email" placeholder="E-posta" required>
+                <textarea name="message" placeholder="Mesajınız" required></textarea>
+                <button type="submit" class="btn">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-columns">
+            <div class="footer-column">
+                <h3>İletişim</h3>
+                <p><strong>Telefon:</strong> +905384262494</p>
+                <p><strong>E-posta:</strong> info@sweetbonanzastart.com</p>
+                <p><strong>Adres:</strong> Kızılay, Meşrutiyet mah, Karanfil Sk. NO:24/3, 06000 Çankaya/Ankara, Türkiye</p>
+            </div>
+            <div class="footer-column">
+                <h3>Sayfalar</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                    <li><a href="terms-of-service.html">Kullanım Şartları</a></li>
+                    <li><a href="cookies-policy.html">Çerez Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sosyal Medya</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sweet Bonanzastart. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <div class="cookie-banner" id="cookie-banner">
+        <p>Bu site çerezler kullanmaktadır. Daha fazla bilgi için <a href="cookies-policy.html">Çerez Politikası</a> sayfasını ziyaret edebilirsiniz.</p>
+        <button id="accept-cookies">Kabul Et</button>
+    </div>
+    <div id="order-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Sipariş Bilgileri</h2>
+            <form id="order-form">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="address">Adresiniz:</label>
+                <input type="text" id="address" name="address" required><br><br>
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit" class="btn">Siparişi Tamamla</button>
+                <button type="button" id="close-order-popup" class="btn">Kapat</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
+    <script src="assets/scripts/scripts.js"></script>
+    <script>
+        let cartCount = 0;
+        const cartIcon = document.querySelector('.cart-icon i');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                cartIcon.textContent = cartCount;
+            });
+        });
+    </script>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('close-popup');
+        const cartPopup = document.getElementById('cart-popup');
+        const cartItems = document.getElementById('cart-items');
+        const closeCartPopup = document.getElementById('close-cart-popup');
+        const checkoutButton = document.getElementById('checkout-button');
+        const orderPopup = document.getElementById('order-popup');
+        const closeOrderPopup = document.getElementById('close-order-popup');
+        const orderForm = document.getElementById('order-form');
+        const cartIcon = document.querySelector('.cart-icon');
+
+        let cart = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product');
+                cart.push(productName);
+                popup.style.display = 'block';
+            });
+        });
+
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        cartIcon.addEventListener('click', () => {
+            cartItems.innerHTML = '';
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<li>Sepetiniz boş.</li>';
+            } else {
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    cartItems.appendChild(li);
+                });
+            }
+            cartPopup.style.display = 'block';
+        });
+
+        closeCartPopup.addEventListener('click', () => {
+            cartPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === cartPopup) {
+                cartPopup.style.display = 'none';
+            }
+        });
+
+        checkoutButton.addEventListener('click', () => {
+            cartPopup.style.display = 'none';
+            orderPopup.style.display = 'block';
+        });
+
+        closeOrderPopup.addEventListener('click', () => {
+            orderPopup.style.display = 'none';
+        });
+
+        orderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Siparişiniz alındı!');
+            cart = [];
+            orderPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === orderPopup) {
+                orderPopup.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
